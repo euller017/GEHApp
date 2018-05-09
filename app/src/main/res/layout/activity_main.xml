@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.aluno.myapplication.MainActivity">
+
+    <ImageButton
+        android:id="@+id/imageButton10"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:adjustViewBounds="true"
+        android:padding="10dp"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/bola"
+        tools:layout_editor_absoluteX="149dp"
+        tools:layout_editor_absoluteY="123dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton11"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:adjustViewBounds="true"
+        android:padding="10dp"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/luva"
+        tools:layout_editor_absoluteX="217dp"
+        tools:layout_editor_absoluteY="123dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton8"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:adjustViewBounds="true"
+        android:padding="10dp"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/bola"
+        tools:layout_editor_absoluteX="281dp"
+        tools:layout_editor_absoluteY="231dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton9"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:adjustViewBounds="true"
+        android:padding="10dp"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/luva"
+        tools:layout_editor_absoluteX="345dp"
+        tools:layout_editor_absoluteY="231dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton6"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:adjustViewBounds="true"
+        android:padding="10dp"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/bola"
+        tools:layout_editor_absoluteX="281dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton7"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:adjustViewBounds="true"
+        android:padding="10dp"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/luva"
+        tools:layout_editor_absoluteX="345dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:adjustViewBounds="true"
+        android:padding="10dp"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/bola"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:adjustViewBounds="true"
+        android:padding="10dp"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/luva"
+        tools:layout_editor_absoluteX="85dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton3"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:adjustViewBounds="true"
+        android:padding="10dp"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/bola"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="231dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton4"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:adjustViewBounds="true"
+        android:padding="10dp"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/luva"
+        tools:layout_editor_absoluteX="85dp"
+        tools:layout_editor_absoluteY="231dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton12"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        app:srcCompat="@drawable/cancela"
+        tools:layout_editor_absoluteX="480dp"
+        tools:layout_editor_absoluteY="80dp"
+        android:adjustViewBounds="true"
+        android:padding="7dp"
+        android:scaleType="fitCenter"/>
+
+    <ImageButton
+        android:id="@+id/imageButton13"
+        android:layout_width="65dp"
+        android:layout_height="64dp"
+        app:srcCompat="@drawable/finalizar"
+        tools:layout_editor_absoluteX="480dp"
+        tools:layout_editor_absoluteY="167dp"
+        android:adjustViewBounds="true"
+        android:padding="10dp"
+        android:scaleType="fitCenter"/>
+</android.support.constraint.ConstraintLayout>
