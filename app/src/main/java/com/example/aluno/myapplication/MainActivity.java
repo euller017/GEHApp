@@ -198,7 +198,7 @@ public class MainActivity extends AppCompatActivity {
          botaoCancelar.setOnClickListener(new View.OnClickListener() {
              @Override
              public void onClick(View v) {
-                 botaoCanc();
+                 botaoZerarInformacoes();
              }
          });
 
@@ -296,7 +296,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private void botaoCanc(){
+    private void botaoZerarInformacoes(){
         porcentagemGolSD.setText("0");
         porcentagemDefesaSD.setText("0");
         porcentagemGolSE.setText("0");
