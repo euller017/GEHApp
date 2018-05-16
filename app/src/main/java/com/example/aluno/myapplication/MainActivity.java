@@ -297,16 +297,33 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void botaoZerarInformacoes(){
-        porcentagemGolSD.setText("0");
-        porcentagemDefesaSD.setText("0");
-        porcentagemGolSE.setText("0");
-        porcentagemDefesaSE.setText("0");
-        porcentagemGolID.setText("0");
-        porcentagemDefesaID.setText("0");
-        porcentagemGolIE.setText("0");
-        porcentagemDefesaIE.setText("0");
-        porcentagemGolCM.setText("0");
-        porcentagemDefesaCM.setText("0");
+        String zero = "0 (0.0%)";
+        porcentagemGolSD.setText(zero);
+        porcentagemDefesaSD.setText(zero);
+        porcentagemGolSE.setText(zero);
+        porcentagemDefesaSE.setText(zero);
+        porcentagemGolID.setText(zero);
+        porcentagemDefesaID.setText(zero);
+        porcentagemGolIE.setText(zero);
+        porcentagemDefesaIE.setText(zero);
+        porcentagemGolCM.setText(zero);
+        porcentagemDefesaCM.setText(zero);
+
+        golSD = 0;
+        defesaSD = 0;
+
+        golID = 0;
+        defesaID = 0;
+
+        golSE = 0;
+        defesaSE = 0;
+
+        golIE = 0;
+        defesaIE = 0;
+
+        golCM = 0;
+        defesaCM = 0;
+
     }
 
 }
