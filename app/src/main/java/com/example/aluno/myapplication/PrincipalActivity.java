@@ -36,12 +36,17 @@ public class PrincipalActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                startActivity(new Intent(PrincipalActivity.this,SobreActivity.class));
+
             }
         });
 
         sobreCriadores.setOnClickListener(new View.OnClickListener() {
             @Override
+
             public void onClick(View v) {
+
+                startActivity(new Intent(PrincipalActivity.this,SobreCriadoresActivity.class));
 
             }
         });
@@ -49,6 +54,8 @@ public class PrincipalActivity extends AppCompatActivity {
         sobreHandebol.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                startActivity(new Intent(PrincipalActivity.this,SobreHandebolActivity.class));
 
             }
         });

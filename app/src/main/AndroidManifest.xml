@@ -12,19 +12,17 @@
         <activity
             android:name=".MainActivity"
             android:configChanges="orientation"
-            android:screenOrientation="landscape">
-
-        </activity>
+            android:screenOrientation="landscape" />
         <activity android:name=".SobreActivity" />
         <activity android:name=".PrincipalActivity">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
+        <activity android:name=".SobreCriadoresActivity" />
+        <activity android:name=".SobreHandebolActivity"></activity>
     </application>
 
 </manifest>
