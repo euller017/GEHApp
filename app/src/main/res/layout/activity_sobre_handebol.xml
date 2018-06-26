@@ -26,14 +26,16 @@
 
     <TextView
         android:id="@+id/textView6"
-        android:layout_width="341dp"
-        android:layout_height="105dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="Para você que gosta do esporte porém não o conhece muito bem, e queira aprender um pouco mais, vamos escrever aqui algumas informações principais para que o jogo do handebol aconteça e consequentemente a análise."
+        android:textAlignment="viewStart"
         android:textColor="@android:color/black"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.061"
