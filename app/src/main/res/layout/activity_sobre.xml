@@ -27,13 +27,13 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="370dp"
+        android:layout_height="295dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="  Esse Aplicativo foi desenvolvido pelos alunos Euller Novaes e Everton Antonio, que no ano de 2018 cursam o 4º de Técnico em Informática Integrado ao ensino médio, e tem esse projeto como seu TCC. Durante o desenvolvimento, foram auxiliados pelos professores Rafael Zottesso e Guilherme Fusco, professores de Tópicos Especiais e Educação Física respectivamente."
+        android:text="  Esse Aplicativo foi desenvolvido pelos alunos Euller Novaes e Everton Antonio, que no ano de 2018 cursam o 4º de Técnico em Informática Integrado ao ensino médio, e tem esse projeto como seu TCC. Durante o desenvolvimento, foram auxiliados pelos professores Rafael Zottesso e Guilherme Fusco, professores de Tópicos Especiais e Educação Física respectivamente. A ideia principal do aplicativo é auxíliar técnicos de handebol para que possa se melhorar o rendimento de seu goleiro, e também verificar o ponto fraco do goleiro adversário."
         android:textColor="@android:color/black"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"

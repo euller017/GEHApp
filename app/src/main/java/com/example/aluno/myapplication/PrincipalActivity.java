@@ -12,6 +12,7 @@ public class PrincipalActivity extends AppCompatActivity {
     private Button sobreApp;
     private Button sobreCriadores;
     private Button sobreHandebol;
+    private Button buttonEst;
 
 
     @Override
@@ -23,6 +24,14 @@ public class PrincipalActivity extends AppCompatActivity {
         sobreApp = (Button) findViewById(R.id.buttonSobreApp);
         sobreCriadores = (Button) findViewById(R.id.buttonCriadores);
         sobreHandebol = (Button) findViewById(R.id.buttonHandebol);
+
+        buttonEst = (Button) findViewById(R.id.buttonEst);
+        buttonEst.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(PrincipalActivity.this,EstatisticasActivity.class));
+            }
+        });
 
         inicio.setOnClickListener(new View.OnClickListener() {
             @Override

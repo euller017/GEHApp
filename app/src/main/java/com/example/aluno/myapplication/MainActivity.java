@@ -1,10 +1,15 @@
 package com.example.aluno.myapplication;
 
+import android.content.DialogInterface;
 import android.media.Image;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -39,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView porcentagemDefesaCM;
 
     private ImageButton botaoCancelar;
+    private ImageButton botaoConcluir;
 
 
 
@@ -65,11 +71,20 @@ public class MainActivity extends AppCompatActivity {
     private String formato;
     private DecimalFormat decimalFormat;
 
+    private AlertDialog alerta;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+
+        //--- Apenas pra criar o alerta---
+        final AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        final AlertDialog.Builder builderSim = new AlertDialog.Builder(this);
 
         // Cria a formatação para 2 casas decimais
         formato = "##.#";
@@ -120,6 +135,7 @@ public class MainActivity extends AppCompatActivity {
         porcentagemDefesaCM = (TextView) findViewById(R.id.textViewDefesaCM);
 
         botaoCancelar = (ImageButton) findViewById(R.id.imageButtonCancelar);
+        botaoConcluir = (ImageButton) findViewById(R.id.imageButtonConcluir);
 
 
         // Fazer o evento de clique no botão
@@ -198,10 +214,92 @@ public class MainActivity extends AppCompatActivity {
          botaoCancelar.setOnClickListener(new View.OnClickListener() {
              @Override
              public void onClick(View v) {
-                 botaoZerarInformacoes();
+
+                 builder.setTitle("Limpar Campo?");
+                 builder.setMessage("Você quer zerar as estatisticas?");
+
+                 builder.setPositiveButton("Sim", new DialogInterface.OnClickListener() {
+                     @Override
+                     public void onClick(DialogInterface dialog, int which) {
+                         botaoZerarInformacoes();
+                     }
+                 });
+
+                 builder.setNegativeButton("Não", new DialogInterface.OnClickListener() {
+                     @Override
+                     public void onClick(DialogInterface dialog, int which) {
+                         Toast.makeText(MainActivity.this, "Cancelando a Ação", Toast.LENGTH_SHORT).show();
+                     }
+                 });
+
+                 alerta= builder.create();
+                 alerta.show();
+
              }
          });
 
+
+        botaoConcluir.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                builderSim.setTitle("Salvar Dados");
+                builderSim.setMessage("Você deseja salvar as estatisticas?");
+
+                final EditText imputNome = new EditText(MainActivity.this);
+                LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(
+                        LinearLayout.LayoutParams.MATCH_PARENT,
+                        LinearLayout.LayoutParams.MATCH_PARENT
+                );
+
+                imputNome.setLayoutParams(lp);
+                builderSim.setView(imputNome);
+
+
+
+                builderSim.setPositiveButton("Sim", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                        if(imputNome.getText().toString().equals("")){
+
+                            Toast.makeText(MainActivity.this, "Preencha o nome do goleiro", Toast.LENGTH_SHORT).show();
+
+                        } else {
+
+                            Goleiro goleiro = new Goleiro(imputNome.getText().toString());
+
+                            goleiro.setDefesaCID(defesaID);
+                            // para todos
+
+                            goleiro.save();
+
+                            botaoZerarInformacoes();
+
+                            Toast.makeText(MainActivity.this, "Dados Gravados", Toast.LENGTH_SHORT).show();
+
+                        }
+
+
+
+
+
+                    }
+                });
+
+                builderSim.setNegativeButton("Não", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Toast.makeText(MainActivity.this, "Cancelando a Ação", Toast.LENGTH_SHORT).show();
+                    }
+                });
+
+                alerta= builderSim.create();
+                alerta.show();
+
+
+            }
+        });
 
 
 
@@ -217,7 +315,7 @@ public class MainActivity extends AppCompatActivity {
             defesaSD++;
 
         // Serve para exibir uma mensagem
-        Toast.makeText(getApplicationContext(), "+1 " + tipo + " canto superior direito.", Toast.LENGTH_SHORT).show();
+        //Toast.makeText(getApplicationContext(), "+1 " + tipo + " canto superior direito.", Toast.LENGTH_SHORT).show();
 
         // Calcula a % dos gols
         porcentagemGolSD.setText((int) golSD + " (" + (decimalFormat.format((golSD / (golSD + defesaSD)) * 100)) + "%)");
@@ -234,7 +332,7 @@ public class MainActivity extends AppCompatActivity {
             defesaID++;
 
 
-        Toast.makeText(getApplicationContext(), "+1 " + tipo + " canto superior direito.", Toast.LENGTH_SHORT).show();
+        //Toast.makeText(getApplicationContext(), "+1 " + tipo + " canto superior direito.", Toast.LENGTH_SHORT).show();
 
         // Calcula a % dos gols
         porcentagemGolID.setText((int) golID + " (" + (decimalFormat.format((golID / (golID + defesaID)) * 100)) + "%)");
@@ -252,7 +350,7 @@ public class MainActivity extends AppCompatActivity {
             defesaSE++;
 
 
-        Toast.makeText(getApplicationContext(), "+1 " + tipo + " canto superior direito.", Toast.LENGTH_SHORT).show();
+        //Toast.makeText(getApplicationContext(), "+1 " + tipo + " canto superior direito.", Toast.LENGTH_SHORT).show();
 
         // Calcula a % dos gols
         porcentagemGolSE.setText((int) golSE + " (" + (decimalFormat.format((golSE / (golSE + defesaSE)) * 100)) + "%)");
@@ -269,7 +367,7 @@ public class MainActivity extends AppCompatActivity {
             defesaIE++;
 
 
-        Toast.makeText(getApplicationContext(), "+1 " + tipo + " canto superior direito.", Toast.LENGTH_SHORT).show();
+        //Toast.makeText(getApplicationContext(), "+1 " + tipo + " canto superior direito.", Toast.LENGTH_SHORT).show();
 
         // Calcula a % dos gols
         porcentagemGolIE.setText((int) golIE + " (" + (decimalFormat.format((golIE / (golIE + defesaIE)) * 100)) + "%)");
@@ -286,7 +384,7 @@ public class MainActivity extends AppCompatActivity {
             defesaCM++;
 
 
-        Toast.makeText(getApplicationContext(), "+1 " + tipo + " canto superior direito.", Toast.LENGTH_SHORT).show();
+        //Toast.makeText(getApplicationContext(), "+1 " + tipo + " canto superior direito.", Toast.LENGTH_SHORT).show();
 
         // Calcula a % dos gols
         porcentagemGolCM.setText((int) golCM + " (" + (decimalFormat.format((golCM / (golCM + defesaCM)) * 100)) + "%)");
@@ -323,6 +421,8 @@ public class MainActivity extends AppCompatActivity {
 
         golCM = 0;
         defesaCM = 0;
+
+        Toast.makeText(this, "Limpando estatisticas", Toast.LENGTH_SHORT).show();
 
     }
 
