@@ -16,6 +16,9 @@ public class Goleiro extends SugarRecord {
     private double defesaMeio;
     private double golCSE;
 
+    public Goleiro() {
+    }
+
     public Goleiro(String nome) {
         this.nome = nome;
     }
