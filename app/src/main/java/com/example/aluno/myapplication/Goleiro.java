@@ -15,6 +15,10 @@ public class Goleiro extends SugarRecord {
     private double defesaCID;
     private double defesaMeio;
     private double golCSE;
+    private double golCSD;
+    private double golCIE;
+    private double golCID;
+    private double golMeio;
 
     public Goleiro() {
     }
@@ -29,6 +33,46 @@ public class Goleiro extends SugarRecord {
 
     public void setNome(String nome) {
         this.nome = nome;
+    }
+
+    public double getGolCSE() {
+        return golCSE;
+    }
+
+    public void setGolCSE(double golCSE) {
+        this.golCSE = golCSE;
+    }
+
+    public double getGolCSD() {
+        return golCSD;
+    }
+
+    public void setGolCSD(double golCSD) {
+        this.golCSD = golCSD;
+    }
+
+    public double getGolCIE() {
+        return golCIE;
+    }
+
+    public void setGolCIE(double golCIE) {
+        this.golCIE = golCIE;
+    }
+
+    public double getGolCID() {
+        return golCID;
+    }
+
+    public void setGolCID(double golCID) {
+        this.golCID = golCID;
+    }
+
+    public double getGolMeio() {
+        return golMeio;
+    }
+
+    public void setGolMeio(double golMeio) {
+        this.golMeio = golMeio;
     }
 
     public double getDefesaCSE() {

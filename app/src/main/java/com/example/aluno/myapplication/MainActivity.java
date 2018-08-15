@@ -239,6 +239,7 @@ public class MainActivity extends AppCompatActivity {
          });
 
 
+         // Botão concluir para salvar os dados
         botaoConcluir.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -246,17 +247,18 @@ public class MainActivity extends AppCompatActivity {
                 builderSim.setTitle("Salvar Dados");
                 builderSim.setMessage("Você deseja salvar as estatisticas?");
 
+                // Cria um campo de texto dentro do alerta
                 final EditText imputNome = new EditText(MainActivity.this);
                 LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(
                         LinearLayout.LayoutParams.MATCH_PARENT,
                         LinearLayout.LayoutParams.MATCH_PARENT
                 );
 
+                // Coloca o campo no alerta
                 imputNome.setLayoutParams(lp);
                 builderSim.setView(imputNome);
 
-
-
+                // configura o clique no "Sim"
                 builderSim.setPositiveButton("Sim", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
@@ -270,23 +272,29 @@ public class MainActivity extends AppCompatActivity {
                             Goleiro goleiro = new Goleiro(imputNome.getText().toString());
 
                             goleiro.setDefesaCID(defesaID);
-                            // para todos
+                            goleiro.setDefesaCIE(defesaIE);
+                            goleiro.setDefesaCSD(defesaSD);
+                            goleiro.setDefesaCSE(defesaSE);
+                            goleiro.setDefesaMeio(defesaCM);
+
+                            goleiro.setGolCID(golID);
+                            goleiro.setGolCIE(golIE);
+                            goleiro.setGolCSD(golSD);
+                            goleiro.setGolCSE(golSE);
+                            goleiro.setGolMeio(golCM);
 
                             goleiro.save();
 
-                            botaoZerarInformacoes();
-
                             Toast.makeText(MainActivity.this, "Dados Gravados", Toast.LENGTH_SHORT).show();
 
+                            botaoZerarInformacoes();
+
                         }
-
-
-
-
 
                     }
                 });
 
+                // Configura o botão "não" do alerta
                 builderSim.setNegativeButton("Não", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
