@@ -6,40 +6,56 @@
     android:layout_height="match_parent"
     tools:context="com.example.aluno.myapplication.SobreActivity">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="Sobre o Aplicativo"
-        android:textColor="@android:color/black"
-        android:textSize="24sp"
-        android:textStyle="italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.438"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.046" />
+        app:layout_constraintVertical_bias="0.0">
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="370dp"
-        android:layout_height="295dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="  Esse Aplicativo foi desenvolvido pelos alunos Euller Novaes e Everton Antonio, que no ano de 2018 cursam o 4º de Técnico em Informática Integrado ao ensino médio, e tem esse projeto como seu TCC. Durante o desenvolvimento, foram auxiliados pelos professores Rafael Zottesso e Guilherme Fusco, professores de Tópicos Especiais e Educação Física respectivamente. A ideia principal do aplicativo é auxíliar técnicos de handebol para que possa se melhorar o rendimento de seu goleiro, e também verificar o ponto fraco do goleiro adversário."
-        android:textColor="@android:color/black"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.033" />
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="28dp"
+                android:text="Sobre o Aplicativo"
+                android:textColor="@android:color/black"
+                android:textSize="24sp"
+                android:textStyle="bold|italic"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="350dp"
+                android:layout_height="699dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="12dp"
+                android:text="Esse Aplicativo foi desenvolvido pelos alunos Euller Novaes e Everton Antonio, que no ano de 2018 cursam o 4º de Técnico em Informática Integrado ao ensino médio, e tem esse projeto como seu TCC. Durante o desenvolvimento, foram auxiliados pelos professores Rafael Zottesso e Guilherme Fusco, professores de Tópicos Especiais e Educação Física respectivamente. A ideia principal do aplicativo é auxíliar técnicos de handebol para que possa se melhorar o rendimento de seu goleiro, e também verificar o ponto fraco do goleiro adversário. A ideia do aplicativo surgiu em 2016 quando os dois alunos foram para seu primeiro jogos de handebol, que foi o Jogos Escolares do Paraná - Fase Regional de 2016, na cidade de Terra Rica, onde foram orientados pelo professor Arthur que até então era professor de Educação Fisica do campus. Alto Paraná era uma equipe  muito forte e como era nossa folga no primeiro dia de competição, ele nos responsabilizou a fazer a analise do time deles, cada um com seu jogador de acordo com a posição. Após a análise percebi que a forma manual era muito cansativa e de certa forma lenta pois tinha que marcar na folha e voltar rapidamente os olhos ao jogo. Dai então surgiu a ideia deste aplicativo, que agilizou o serviço, é facil e pratico de usar."
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:textStyle="bold|italic"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView12" />
+        </android.support.constraint.ConstraintLayout>
+
+    </ScrollView>
 
 </android.support.constraint.ConstraintLayout>
