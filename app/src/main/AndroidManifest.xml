@@ -38,7 +38,8 @@
             android:name="DOMAIN_PACKAGE_NAME"
             android:value="com.example.aluno.myapplication" />
 
-        <activity android:name=".EstatisticasActivity"></activity>
+        <activity android:name=".EstatisticasActivity" />
+        <activity android:name=".EstatisticaListActivity"></activity>
     </application>
 
 </manifest>
