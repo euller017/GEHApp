@@ -114,4 +114,16 @@ public class Goleiro extends SugarRecord {
     public void setDefesaMeio(double defesaMeio) {
         this.defesaMeio = defesaMeio;
     }
+
+    @Override
+    public String toString() {
+        return "Goleiro: " + nome + "        defesa/gol \n" +
+                "Canto Superior Esquerdo: " + defesaCSE + "/" + golCSE + '\n' +
+                "Canto Inferior Esquerdo: " + defesaCIE + "/" + golCIE + '\n' +
+                "Canto Superior Direito: " + defesaCSD  + "/" + golCSD + '\n' +
+                "Canto Inferior Direito: " + defesaCID  + "/" + golCID + '\n' +
+                "Meio: " + defesaMeio  +  "/" + golMeio;
+
+
+    }
 }

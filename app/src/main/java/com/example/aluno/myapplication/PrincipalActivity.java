@@ -29,7 +29,7 @@ public class PrincipalActivity extends AppCompatActivity {
         buttonEst.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(PrincipalActivity.this,EstatisticasActivity.class));
+                startActivity(new Intent(PrincipalActivity.this,EstatisticaListActivity.class));
             }
         });
 

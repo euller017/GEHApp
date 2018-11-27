@@ -1,5 +1,6 @@
 package com.example.aluno.myapplication;
 
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
@@ -15,6 +16,7 @@ public class EstatisticasActivity extends AppCompatActivity {
 
     private List<Goleiro> goleiros;
     private TextView txtDdados;
+    private AlertDialog alerta;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
