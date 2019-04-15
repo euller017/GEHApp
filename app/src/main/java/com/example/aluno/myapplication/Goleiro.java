@@ -8,6 +8,7 @@ import com.orm.SugarRecord;
 
 public class Goleiro extends SugarRecord {
 
+
     private String nome;
     private double defesaCSE;
     private double defesaCIE;
